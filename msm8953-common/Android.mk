@@ -1,4 +1,4 @@
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,6 +23,17 @@ LOCAL_MODULE := libantradio
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/lib64/libantradio.so
 LOCAL_SRC_FILES_32 := proprietary/lib/libantradio.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := vendor.display.color@1.0
+LOCAL_MODULE_OWNER := xiaomi
+LOCAL_SRC_FILES_64 := proprietary/lib64/vendor.display.color@1.0.so
+LOCAL_SRC_FILES_32 := proprietary/lib/vendor.display.color@1.0.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
